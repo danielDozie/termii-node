@@ -1,6 +1,6 @@
 {
   "name": "termii-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node SDK for termii messaging platform written with typesscript support",
   "main": "index.js",
   "scripts": {
