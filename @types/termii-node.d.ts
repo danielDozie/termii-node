@@ -1,6 +1,4 @@
-declare module 'termii-node' {
-  export * from './src/index';
-}
+declare module 'termii-node'
 type GetBalance = {
     api_key: string
 }
