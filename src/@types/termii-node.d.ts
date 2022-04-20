@@ -1,4 +1,4 @@
-declare module 'index' {
+declare module 'termii-node' {
   export * from './src/index';
 }
 type GetBalance = {
