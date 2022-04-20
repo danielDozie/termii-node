@@ -1,6 +1,4 @@
-import { GetBalance, GetMessageHistory, GetNumberStatus, GetSenderId, RequestSenderId, SearchPhone, SendInAppToken, SendMessage, SendMessageBulk, SendToken, SendVoiceCall, SendVoiceToken, TermiiFunction, VerifyToken } from './@types';
 const base_url = 'https://api.ng.termii.com'
-
 export async function getBalance({ api_key }: GetBalance): Promise<TermiiFunction | undefined> {
     try {
         const response = await fetch(`${base_url}/api/get-balance?api_key=${api_key}`)
