@@ -1,28 +1,31 @@
-export type GetBalance = {
+declare module 'index' {
+  export * from './src/index';
+}
+type GetBalance = {
     api_key: string
 }
-export type GetMessageHistory = {
+type GetMessageHistory = {
     api_key: string
 }
-export type GetNumberStatus = {
+type GetNumberStatus = {
     api_key: string
     phone_number: string
     country_code: string
 }
-export type SearchPhone = {
+type SearchPhone = {
     api_key: string
     phone_number: string
 }
-export type GetSenderId = {
+type GetSenderId = {
     api_key: string
 }
-export type RequestSenderId = {
+type RequestSenderId = {
     new_sender_id: string
     id_usecase: string
     api_key: string
     company_name: string
 }
-export type SendMessage = {
+type SendMessage = {
     api_key: string
     sms: string
     from: string
@@ -31,7 +34,7 @@ export type SendMessage = {
     media_url?: string
     media_caption?: string
 }
-export type SendMessageBulk = {
+type SendMessageBulk = {
     api_key: string
     sms: string
     from: string
@@ -40,7 +43,7 @@ export type SendMessageBulk = {
     media_url?: string
     media_caption?: string
 }
-export type SendToken = {
+type SendToken = {
     api_key: string
     to: string
     from: string
@@ -52,27 +55,27 @@ export type SendToken = {
     pin_placeholder: string
     message_text: string
 }
-export type SendVoiceToken = {
+type SendVoiceToken = {
     api_key: string
     pin_attempts: number
     pin_time_to_live: number
     pin_length: number
     phone_number: string
 }
-export type SendVoiceCall = {
+type SendVoiceCall = {
     api_key: string
     phone_number: string
 }
-export type SendInAppToken = {
+type SendInAppToken = {
     api_key: string
     phone_number: string
     pin_attempts: number
     pin_time_to_live: number
     pin_length: number
 }
-export type VerifyToken = {
+type VerifyToken = {
     api_key: string
     pin_id: string
     otp_code: string
 }
-export type TermiiFunction = (...params: Balance | History | NumberStatus | SearchPhone | GetSenderId | RequestSenderId | SendMessage | SendMessageBulk | SendToken |SendVoiceToken | SendVoiceCall | SendInAppToken | VerifyToken) => void
+type TermiiFunction = (...params: Balance | History | NumberStatus | SearchPhone | GetSenderId | RequestSenderId | SendMessage | SendMessageBulk | SendToken |SendVoiceToken | SendVoiceCall | SendInAppToken | VerifyToken) => void
